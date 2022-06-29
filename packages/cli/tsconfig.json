@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.packages.json",
+  "compilerOptions": {
+    "inlineSources": true,
+    "lib": ["DOM", "ES2020"],
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "skipLibCheck": false,
+    "typeRoots": [
+      "../../node_modules/@types",
+      "./node_modules/@types",
+      "./src/types"
+    ]
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.json"],
+  "references": [
+    { "path": "../controllers" },
+    { "path": "../plugin-browserify" }
+  ]
+}
